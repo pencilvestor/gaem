@@ -105,7 +105,7 @@ void kit_draw_line(kit_Context *ctx, kit_Color color, int x1, int y1, int x2, in
 void kit_draw_image(kit_Context *ctx, kit_Image *img, int x, int y);
 void kit_draw_image2(kit_Context *ctx, kit_Color color, kit_Image *img, int x, int y, kit_Rect src);
 void kit_draw_image3(kit_Context *ctx, kit_Color mul_color, kit_Color add_color, kit_Image *img, kit_Rect dst, kit_Rect src);
-int  kit_draw_text(kit_Context *ctx, kit_Color color, char *text, int x, int y);
-int  kit_draw_text2(kit_Context *ctx, kit_Color color, kit_Font *font, char *text, int x, int y);
+int  kit_draw_text(kit_Context *ctx, kit_Color color, const char *text, int x, int y);
+int  kit_draw_text2(kit_Context *ctx, kit_Color color, kit_Font *font, const char *text, int x, int y);
 
 #endif // KIT_H

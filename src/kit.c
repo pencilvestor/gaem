@@ -586,12 +586,12 @@ void kit_draw_image3(kit_Context *ctx, kit_Color mul_color, kit_Color add_color,
 }
 
 
-int kit_draw_text(kit_Context *ctx, kit_Color color, char *text, int x, int y) {
+int kit_draw_text(kit_Context *ctx, kit_Color color, const char *text, int x, int y) {
     return kit_draw_text2(ctx, color, ctx->font, text, x, y);
 }
 
 
-int kit_draw_text2(kit_Context *ctx, kit_Color color, kit_Font *font, char *text, int x, int y) {
+int kit_draw_text2(kit_Context *ctx, kit_Color color, kit_Font *font, const char *text, int x, int y) {
     for (uint8_t *p = (void*) text; *p; p++) {
         kit_Glyph g = font->glyphs[*p];
         kit_draw_image2(ctx, color, font->image, x, y, g.rect);
